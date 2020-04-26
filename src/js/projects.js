@@ -1,72 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { projects } from './data.js'
 
-
-
-
-function Projects(props) {
-    return (
-        props.list.map((project, i) => {
-            return (
-                <div className="flexrow proj" key={i}>
-                    <SingleProj project={project} index={i} />
-                </div>
-            )
-        })
-    )
+const color = (index) => {
+    if (index % 3 == 0) {
+        return "pinkt"
+    }
+    else if (index % 3 == 1) {
+        return "yellowt"
+    }
+    else {
+        return "greent"
+    }
 }
-
-
 
 function SingleProj(props) {
-    var temp = []
-    var color
-    if (props.index % 3 == 0) {
-        color = "pinkt"
-    }
-    else if (props.index % 3 == 1) {
-        color = "yellowt"
-    }
-    else {
-        color = "greent"
-    }
+    const [state, changeState] = useState("project.png")
+    return (
+        <div className="flexcol proj" key={props.index} onMouseOver={() => { changeState("project.gif"); console.log('a') }} onMouseLeave={() => changeState("project.png")}>
+            <div className="proj-photo"><img src={`./img/${state}`} /></div>
 
-
-    if (props.index % 2 == 0) {
-        temp.push(<div className={"tech " + color}>{props.project.stack.join(" | ")}</div>)
-        temp.push(<div className="rightd flexcol" >
-            <Description project={props.project} />
-        </div>)
-    }
-    else {
-        temp.push(<div className="leftd flexcol" >
-            <Description project={props.project} />
-        </div>)
-        temp.push(<div className={"tech " + color}>{props.project.stack.join(" | ")}</div>)
-
-    }
-    return temp
+            <div className="title">{props.project.name}</div>
+            <div className={"tech " + color(props.index)}>{props.project.stack.join(" | ")}</div>
+            <div className="desc">{props.project.description.map((desc, i) => {
+                return (<div key={i}>{desc}</div>)
+            })}</div>
+            <div className="link"><a href={props.project.link}>Link to the project </a></div>
+        </div>
+    )
 }
+function Projects(props) {
 
 
 
-
-function Description(props) {
-    var temp = []
-    temp.push(<div className="title">{props.project.name}</div>)
-    temp.push(<div className="desc">{props.project.description.map((desc, i) => {
-        return (<div key={i}>{desc}</div>)
-    })}</div>)
-    temp.push(<div className="link"><a href={props.project.link}>{props.project.link} </a></div>)
 
     return (
-        temp
+        props.list.map((project, i) =>
+            <SingleProj project={project} index={i} />
+        )
     )
-
 }
 
+
+{/* function SingleProj(props) {
+    return (
+
+    )
+} */}
+
+
+
 function _projects() {
-    return (<div className="flexcol projectslist">
+    return (<div className="flexrow projectslist">
         {
             <Projects list={projects} />
         }

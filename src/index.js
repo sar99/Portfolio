@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import _navbar from './js/nav.js'
+import _navbar, { _ham } from './js/nav.js'
 import _aboutSection from './js/about.js'
 import { _links } from './js/about.js'
 import _skills from './js/skills.js'
@@ -15,8 +15,15 @@ const load = () => {
         document.getElementById("mainscreen").style.display = "none";
         document.getElementById("root").style.display = "flex";
         setTimeout(() => {
-            document.getElementById("navi").className += " blink-image"
-            document.getElementById("navi").style.display = "flex"
+            if (window.innerWidth > 850) {
+                document.getElementById("navi").className += " blink-image"
+                document.getElementById("navi").style.display = "flex"
+            }
+            else {
+                document.getElementById("nav-icon3").className += " blink-image"
+                document.getElementById("nav-icon3").style.display = "flex"
+            }
+
         }, 500)
         setTimeout(() => {
             document.getElementById("photo").style.opacity = 1
@@ -44,6 +51,7 @@ const base = (
 
         <div id="root">
             <_navbar />
+            <_ham />
 
 
             <div id="NAVABOUT">
