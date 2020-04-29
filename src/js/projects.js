@@ -14,10 +14,10 @@ const color = (index) => {
 }
 
 function SingleProj(props) {
-    const [state, changeState] = useState("project.png")
+    const [state, changeState] = useState("png")
     return (
-        <div className="flexcol proj" key={props.index} onMouseOver={() => { changeState("project.gif"); console.log('a') }} onMouseLeave={() => changeState("project.png")}>
-            <div className="proj-photo"><img src={`./img/${state}`} /></div>
+        <div className="flexcol proj" key={props.index} onMouseOver={() => { changeState("gif"); console.log('a') }} onMouseLeave={() => changeState("png")}>
+            <div className="proj-photo"><img src={`./img/${props.project.image}.${state}`} /></div>
 
             <div className="title">{props.project.name}</div>
             <div className={"tech " + color(props.index)}>{props.project.stack.join(" | ")}</div>

@@ -39,6 +39,7 @@ export const projects = [
             "- Developed my own portfolio website.", "- Hosted the website using Firebase."
         ],
         link: "https://www.github.com/sar99",
+        image: "project",
         stack: [
             "REACT.JS"
         ]
@@ -49,6 +50,7 @@ export const projects = [
             "- Developed a basic arcade game of hitting randomly appearing ships with 3 levels.", "- Developed using PyGame library of Python."
         ],
         link: "https://github.com/sar99/Avengers-Assemble",
+        image: "project",
         stack: [
             "PYTHON"
         ]
@@ -59,6 +61,7 @@ export const projects = [
             "- Developed a class project for online registrations of the Visitors' Hostel in ABV-IIITM.", "- Included all levels of authorisation and complete transaction cycle."
         ],
         link: "https://github.com/sar99/IVH-MDP",
+        image: "project",
         stack: [
             "HTML5", "CSS3", "PHP", "MYSQL", "JAVASCRIPT"
         ]
@@ -69,6 +72,7 @@ export const projects = [
             "- Developed an interactive periodic table information program.", "- Included various graphics elements and file handling."
         ],
         link: "",
+        image: "project",
         stack: [
             "C++"
         ]

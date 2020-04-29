@@ -210,7 +210,7 @@ body{
     display: none;
     position: absolute;
     margin: 5vmin;
-    right: 0;
+    left: 0;
     position: fixed;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -231,7 +231,7 @@ body{
     width: 100%;
     border-radius: 9px;
     opacity: 1;
-    left: 0;
+    left: 5%;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -654,4 +654,57 @@ body{
     font-size: 2vmin;
     margin-top: 4vmin;
     margin-bottom: 4vmin;
+}
+
+/*------------------------------------ FOR SMALL SCREENS ---------------------------------------------------------------- */
+@media(max-width: 850px)
+{
+    .intro{
+        font-size: 3vmin;
+    }
+    .links
+    {
+        font-size: 1.3vmax;
+    }
+    .skillname{
+        font-size: 2.4vmin;
+    }
+    #education{
+        width: 30vmax;
+        text-align: left;
+        margin-top: 7vh;
+        margin-left: 5vw;
+    }
+    #education>img{
+        max-width: 90vw;
+    }
+
+    .tech{
+        font-size: 3vmin;
+    }
+    .title{
+        font-size: 3.5vmin;
+    }
+    .desc{
+        font-size: 2.2vmin;
+    }
+    .link{
+        font-size: 2.4vmin;
+    }
+    .comp{
+        font-size: 3vmin;
+    }
+    
+    .desg{
+        font-size: 3vmin;
+    }
+    .time{
+        font-size: 2.4vmin;
+    }
+    .loc{
+        font-size: 2.2vmin;
+    }
+    .achieve>img{
+        max-width: 40vmax;
+    }
 }
