@@ -36,10 +36,10 @@ export const projects = [
     {
         name: "MY PORTFOLIO",
         description: [
-            "- Developed my own portfolio website.", "- Hosted the website using Firebase."
+            "- Developed my own portfolio website.", "- Hosted the website using Heroku."
         ],
         link: "https://www.github.com/sar99",
-        image: "project",
+        image: "portfolio",
         stack: [
             "REACT.JS"
         ]
@@ -50,9 +50,20 @@ export const projects = [
             "- Developed a basic arcade game of hitting randomly appearing ships with 3 levels.", "- Developed using PyGame library of Python."
         ],
         link: "https://github.com/sar99/Avengers-Assemble",
-        image: "project",
+        image: "avengers-assemble",
         stack: [
             "PYTHON"
+        ]
+    },
+    {
+        name: "SKYPEY",
+        description: [
+            "- Developed a chatting interface using React Redux.", "- Included functions like send, edit and delete message."
+        ],
+        link: "https://github.com/sar99/Skypey",
+        image: "skypey",
+        stack: [
+            "REACT.JS"
         ]
     },
     {
@@ -61,7 +72,7 @@ export const projects = [
             "- Developed a class project for online registrations of the Visitors' Hostel in ABV-IIITM.", "- Included all levels of authorisation and complete transaction cycle."
         ],
         link: "https://github.com/sar99/IVH-MDP",
-        image: "project",
+        image: "ivh-mdp",
         stack: [
             "HTML5", "CSS3", "PHP", "MYSQL", "JAVASCRIPT"
         ]
@@ -72,9 +83,20 @@ export const projects = [
             "- Developed an interactive periodic table information program.", "- Included various graphics elements and file handling."
         ],
         link: "",
-        image: "project",
+        image: "periodic-table",
         stack: [
             "C++"
+        ]
+    },
+    {
+        name: "BOOK YOUR BOOK v1.0",
+        description: [
+            "- Developed a community website for students for exchange of books.", "- Included features like upload, borrow and lend books.", "- v2.0 coming soon!"
+        ],
+        link: "",
+        image: "book-your-book",
+        stack: [
+            "HTML5", "CSS3", "PHP", "MYSQL", "JAVASCRIPT"
         ]
     },
 
